@@ -1,0 +1,63 @@
+<%- include ('partials/header', {username: ""}) -%>
+
+<div class="container logo-container py-5 d-flex justify-content-center">
+  <img src="../img/TS_Logo.png"
+       class="logo-image"
+       alt="True Legacy Homes"
+       width="500"
+       height="225">
+</div>
+
+<div class="container container-header">
+  <!-- <header class="jumbotron"> -->
+  <div class="container py-5">
+    <h1 class="display-1">Estate Sale Manager</h1>
+    <p>A better way to manage and track your estate sale data</p>
+
+    <div class="row">
+      <div class="col-lg-12 py-4">
+        <!-- Split button -->
+
+        <!-- <div class="btn-group">
+          <button type="button"
+                  class="btn btn-select-action">Start Here</button>
+        </div> -->
+
+        <div class="card text-center landing-card">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab-new" onclick="changeContentNew()" aria-current="true" href="#">Add New</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-existing" onclick="changeContentExisting()" href="#">View Existing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab-admin" onclick="changeContentAdmin()" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body" id="landing-card-body">
+            <!-- <h5 class="card-title" id="landing-card-title">Add New Sale</h5> -->
+            <p class="card-text" id="landing-card-text">Add data for a brand new estate sale</p>
+            <a href="/sale" class="btn btn-select-action" id="landing-card-btn">Add New Sale</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- </header> -->
+
+</div>
+
+<div class="container container-actions">
+  <div class="row">
+    <div class="col-lg-12">
+
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer') -%>
