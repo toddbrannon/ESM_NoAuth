@@ -30,6 +30,7 @@ async function start() {
   // Using Routes ==========================================
   const client = new MongoClient(process.env.MONGODB_CONN as string);
   await client.connect();
+  console.log('connected to mongodb')
   const db = client.db(process.env.DB_NAME);
 
   app.use('/', await new IndexRouter(db).getRouter());

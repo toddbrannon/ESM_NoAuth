@@ -17,7 +17,7 @@ class IndexRouter {
     async getRouter() {
         this.router.get("/", (req, res) => {
             res.render("landing", {
-                title: "True Legacy Homes",
+                title: "Estate Sale Manager",
             });
         });
         this.router.get('/user-info', async (req, res) => {
@@ -42,7 +42,7 @@ class IndexRouter {
                     if (err)
                         throw err;
                     res.render('sale', {
-                        title: 'True Legacy Homes Sale Manager New Sale',
+                        title: 'Estate Sale Manager New Sale',
                         marketArray: rows[0],
                         serviceArray: rows[1],
                         cashierArray: rows[2],
@@ -106,7 +106,7 @@ class IndexRouter {
                 statuses.push(status);
             }
             res.render('sales', {
-                title: 'True Legacy Homes Sale Manager - All Sales',
+                title: 'Estate Sale Manager - All Sales',
                 saleresults: sales,
                 salestatuses: statuses,
                 sectioncount: sections.length
@@ -226,7 +226,7 @@ class IndexRouter {
                     sale = {};
                 }
                 res.render('invoice', {
-                    title: 'True Legacy Homes Sale Manager New Sale',
+                    title: 'Estate Sale Manager New Sale',
                     invoice: (0, invoice_1.saleToInvoice)(sale),
                     sale
                 });

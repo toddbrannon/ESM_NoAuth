@@ -22,6 +22,7 @@ async function start() {
     app.use(flash());
     const client = new mongodb_1.MongoClient(process.env.MONGODB_CONN);
     await client.connect();
+    console.log('connected to mongodb');
     const db = client.db(process.env.DB_NAME);
     app.use('/', await new index_router_1.IndexRouter(db).getRouter());
     app.listen(process.env.PORT, () => {
